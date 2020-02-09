@@ -71,7 +71,7 @@ def brute_url(url):
 			user.clear()
 	except requests.exceptions.ConnectionError as e:
 		print
-		except Exception as e:
+	except Exception as e:
 		print
 
 def main():
