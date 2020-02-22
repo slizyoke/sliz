@@ -6,7 +6,7 @@ def fetching_user(url):
 	print(colored("[{}][*] Site: {}".format(local_time(),url), "blue"))
 	user_list = []
 	try:
-		req = requests.get(url+"/wp-json/wp/v2/users/", allow_redirects=False, timeout=0.5).content.decode('utf-8')
+		req = requests.get(url+"/wp-json/wp/v2/users/", allow_redirects=False, timeout=1).content.decode('utf-8')
 		try:
 			print
 			for x in json.loads(req):
