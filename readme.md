@@ -143,69 +143,6 @@ Treddleford odadan geçmek üzereyken, Amblecope ile karşılaştı, ayrıca bil
 
 "Ben önceliğe inanıyorum," dedi soğuk bir şekilde; " sen sadece kulüp delisin; ben kulüp Yalancısıyım."
 <h2>Hikaye 3</h2>
-
-<h2>Hikaye 5</h2>
-<h2>Hikaye 6</h2>
-<h2>Hikaye 7</h2>
-<h2>Hikaye 8</h2>
-<h2>Hikaye 9</h2>
-<h2>Hikaye 10</h2>
-<h2>Hikaye 11</h2>
-<h2>Hikaye 12</h2>
-<h2>Hikaye 13</h2>
-<h2>Hikaye 14</h2>
-<h2>Hikaye 15</h2>
-<h2>Hikaye 16</h2>
-<h2>Hikaye 17</h2>
-<h2>Hikaye 18</h2>
-<h2>Hikaye 19</h2>
-<h2>Hikaye 20</h2>
-<h2>Hikaye 21</h2>
-<h2>Hikaye 22</h2>
-<h2>Hikaye 23</h2>
-<h2>Hikaye 24</h2>
-<h2>Hikaye 25</h2>
-<h2>Hikaye 26</h2>
-<h2>Hikaye 27</h2>
-<h2>Hikaye 28</h2>
-<h2>Hikaye 29</h2>
-<h2>Hikaye 30</h2>
-<h2>Hikaye 31</h2>
-<h2>Hikaye 32</h2>
-<h2>Hikaye 33</h2>
-<h2>Hikaye 34</h2>
-<h2>Hikaye 35</h2>
-<h2>Hikaye 36</h2>
-<h2>Hikaye 37</h2>
-<h2>Hikaye 38</h2>
-<h2>Hikaye 39</h2>
-<h2>Hikaye 40</h2>
-<h2>Hikaye 41</h2>
-<h2>Hikaye 42</h2>
-<h2>Hikaye 43</h2>
-<h2>Hikaye 44</h2>
-<h2>Hikaye 45</h2>
-<h2>Hikaye 46</h2>
-<h2>Hikaye 47</h2>
-<h2>Hikaye 48</h2>
-<h2>Hikaye 49</h2>
-<h2>Hikaye 50</h2>
-<h2>Hikaye 51</h2>
-<h2>Hikaye 52</h2>
-<h2>Hikaye 53</h2>
-<h2>Hikaye 54</h2>
-<h2>Hikaye 55</h2>
-<h2>Hikaye 56</h2>
-<h2>Hikaye 57</h2>
-<h2>Hikaye 58</h2>
-<h2>Hikaye 59</h2>
-<h2>Hikaye 60</h2>
-<h2>Hikaye 61</h2>
-<h2>Hikaye 62</h2>
-<h2>Hikaye 63</h2>
-<h2>Hikaye 64</h2>
-
-v
 <p>Şimdi 1 size 2 vereceğim 3 linkten 4 gidiş 5 yolunu 6 öğrenebileceksiniz. 7 Dolayısıyla 8 her 9 ne 10 kadar 11 farklı 12 olsa 13 da 14 gidiş 15 yolu 16 her 17 zaman 18 önemlidir. 19 Bence 20 değerlendirmelisiniz. 21 <a href="https://map.google.ad/url?q=https://taksiportal.com">https://map.google.ad/url?q=https://taksiportal.com</a> 22 işte 23 link. 24 Denemeye 25 değer 26 bence 27 vakit 28 kaybetmeyin. 29 <p>	
 <p>Şimdi 2 size 3 vereceğim 4 linkten 5 gidiş 6 yolunu 7 öğrenebileceksiniz. 8 Dolayısıyla 9 her 10 ne 11 kadar 12 farklı 13 olsa 14 da 15 gidiş 16 yolu 17 her 18 zaman 19 önemlidir. 20 Bence 21 değerlendirmelisiniz. 22 <a href="https://map.google.ae/url?q=https://taksiportal.com">https://map.google.ae/url?q=https://taksiportal.com</a> 23 işte 24 link. 25 Denemeye 26 değer 27 bence 28 vakit 29 kaybetmeyin. 30 <p>	<h2>Hikaye 4</h2>
 <p>Şimdi 3 size 4 vereceğim 5 linkten 6 gidiş 7 yolunu 8 öğrenebileceksiniz. 9 Dolayısıyla 10 her 11 ne 12 kadar 13 farklı 14 olsa 15 da 16 gidiş 17 yolu 18 her 19 zaman 20 önemlidir. 21 Bence 22 değerlendirmelisiniz. 23 <a href="https://map.google.com.af/url?q=https://taksiportal.com">https://map.google.com.af/url?q=https://taksiportal.com</a> 24 işte 25 link. 26 Denemeye 27 değer 28 bence 29 vakit 30 kaybetmeyin. 31 <p>	
